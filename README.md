@@ -16,10 +16,20 @@ This repo holds **Sidechat's installers and updates**. The source lives elsewher
 
 Sign in with your Matrix account (matrix.org works), and press **F1** for the guide.
 
+## Check your download (optional, takes 10 seconds)
+
+Each release lists the installer's SHA-256, and the person who sent you here will share it too. In PowerShell:
+
+```
+Get-FileHash .\Sidechat-win-Setup.exe
+```
+
+If the long hex string matches, the file is the real one. If it doesn't, don't run it, and tell them.
+
 ## Updates
 
 Sidechat checks here every few hours. When a fresher build hatches, it downloads quietly, double-checks the
-signature, and asks you to restart when it suits you.
+signature (it refuses anything that isn't signed by the release key), and offers a restart when it suits you.
 
 ## Removing it
 
